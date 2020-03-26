@@ -27,6 +27,7 @@
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-recaptcha": "^5.0.1",
     "mongoose": "^5.9.6"
   }
 }
