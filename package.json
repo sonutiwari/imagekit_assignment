@@ -1,0 +1,32 @@
+{
+  "name": "imagekit_assignment",
+  "version": "1.0.0",
+  "description": "Imagekit fullstack web developer assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonutiwari/imagekit_assignment.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "express",
+    "captcha",
+    "form",
+    "validation"
+  ],
+  "author": "Sonu Tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonutiwari/imagekit_assignment/issues"
+  },
+  "homepage": "https://github.com/sonutiwari/imagekit_assignment#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6"
+  }
+}
