@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>imagekit</title>
+    <title><%- title %> </title>
 </head>
 <body>
     <h1 class="text-center">Sign up</h1>
@@ -23,13 +23,21 @@
         </div>
         <% if (showCaptcha) { %>
             <div class="form-group">
-                <%- recaptcha %> 
-                <% recaptcha %>
+                <%- recaptcha %>
             </div>
         <% } %>
         <div class="form-group">
             <input type="submit" value="Sign Up" class="btn btn-success">
         </div>
-    </form>    
+    </form> 
+    <% if (success) { %>
+        <div class="alert alert-success"><%- success %></div>
+    <% } else if(passwordErr) { %>
+        <div class="alert alert-danger"><%- passwordErr %></div>
+    <% } else if(dbError) { %>
+        <div class="alert alert-danger"><%- dbError %></div>
+    <% } else if(captchaError) { %>
+        <div class="alert alert-danger"><%- captchaError %></div>
+    <% } %> 
 </body>
 </html>
