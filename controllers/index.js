@@ -61,7 +61,7 @@ AuthController.registerUser = (req, res) => {
             let document = new userModel(data); // create document.
             document.save((err, resp) => {
                 if (err) {
-                    req.flash("dbError", err.errmsg.split(':')[0]);
+                    req.flash("dbError", "Error in Database, Probably Email already exists");
                     return res.redirect('/');
                 } else {
                     req.flash("success", "Saved data successfully into DB");
@@ -85,7 +85,7 @@ AuthController.registerUser = (req, res) => {
                         let document = new userModel(data);
                         document.save((err, resp) => {
                             if (err) {
-                                req.flash("dbError", err.errmsg.split(':')[0]);
+                                req.flash("dbError", "Error in Database, Probably Email already exists");
                                 return res.redirect('/');
                             } else {
                                 req.flash("success", "Saved data successfully into DB");
@@ -98,7 +98,7 @@ AuthController.registerUser = (req, res) => {
                     }
                 }
             } else { // Case 2.
-                req.flash("captchaError", req.recaptcha.error);
+                req.flash("captchaError", req.recaptcha.error + " Invalid captcha");
                 return res.redirect('/');
             }
         });
