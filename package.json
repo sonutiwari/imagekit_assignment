@@ -26,8 +26,11 @@
   },
   "homepage": "https://github.com/sonutiwari/imagekit_assignment#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-mailer": "^0.3.1",
     "express-recaptcha": "^5.0.1",
     "express-session": "^1.17.0",
     "mongoose": "^5.9.6",
